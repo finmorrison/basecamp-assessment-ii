@@ -5,7 +5,10 @@
  * Assign the keys the appropriate values.
  */
 
-// CODE HERE
+var me = {
+  firstname: "Findlay",
+  age: 21,
+  state: "Utah"};
 
 /**
  * #2
@@ -14,8 +17,7 @@
  * The new key should be 'faveColor'. Set it to your favorite color as a string.
  */
 
-// CODE HERE
-
+me.faveColor = "Green";
 /**
  * #3
  *
@@ -29,7 +31,8 @@ var message = {
   userName: me.firstname
 };
 // DON'T TOUCH THE CODE ABOVE
-// CODE HERE
+
+message[text]= "Reid";
 
 /**
  * #4
@@ -39,24 +42,28 @@ var message = {
  * downVote() should take in a number, subtract one from it, and return the number.
  */
 
-// CODE HERE
-
+var adjustCount = {
+upvote: function(x){
+  return (x + 1)},
+ downvote: function(y){
+  return (y-1)}
+};
+adjustCount.upvote(2);
+adjustCount.downvote(4);
 /**
  * #5
  *
  * Create an array called 'myFriends' with four of your friends names.
  */
 
-// CODE HERE
-
+var myFriends = ["Spencer", "Cameron", "Josh", "Nick"];
 /**
  * #6
  *
  * Add a fifth friends name to the end of your 'myFriends' array.
  */
 
-// CODE HERE
-
+myFriends.push("Dillan");
 /**
  * #7
  *
@@ -67,8 +74,8 @@ var message = {
 // DON'T TOUCH THE CODE BELOW
 var myArray = [1, 2, 3, 4];
 // DON'T TOUCH THE CODE ABOVE
-// CODE HERE
 
+var myArrayCopy = myArray.slice(0, 4);
 /**
  * #8
  *
@@ -80,7 +87,13 @@ var myArray = [1, 2, 3, 4];
 var myNumbers = [333, 1, 4, 5, 511, 34, 88, 77, 222];
 //DON'T TOUCH THE CODE ABOVE
 function evensOnly() {
-  // CODE HERE
+  var x = [];
+  for (i = 0; i <= myNumbers.length; i++)
+  {if ((myNumbers[i]% 2) === 0){
+    x.push(myNumbers[i]);
+    }
+  }
+  return x;
 }
 
 /**
@@ -100,6 +113,10 @@ var peopleIknow = [
   { name: "Holly", friend: true }
 ];
 
+var trueFriends = peopleIknow.filter(function(friends){
+  return friends.friend === true;
+}
+
 /**
  * #10
  *
@@ -110,3 +127,12 @@ var peopleIknow = [
  */
 
 let randomNumbers = [1, 3453, 34, 456, 32, 3, 2, 0];
+ var index = [];                                    
+function indexFinder (array){
+  for(i = 0; i <= array.length; i ++){
+  index.push(i);
+  }
+  return index;
+}
+indexFinder(randomNumbers);
+console.log(index);
